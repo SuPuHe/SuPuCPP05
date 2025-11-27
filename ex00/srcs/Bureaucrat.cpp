@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:17:39 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 13:15:01 by omizin           ###   ########.fr       */
+/*   Updated: 2025/11/27 13:27:31 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,16 +64,16 @@ void		Bureaucrat::decrementGrade()
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "Grade is too high";
+	return RED "Grade is too high" RESET;
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "Grade is too low";
+	return RED "Grade is too low" RESET;
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b)
 {
-	out << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+	out << GREEN << b.getName() << ", bureaucrat grade " << b.getGrade() << RESET;
 	return out;
 }
