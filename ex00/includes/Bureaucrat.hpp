@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:06:55 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 12:33:02 by omizin           ###   ########.fr       */
+/*   Updated: 2025/11/27 13:05:56 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,18 @@ class Bureaucrat
 
 		void			incrementGrade();
 		void			decrementGrade();
+
+		class GradeTooHighException : public std::exception
+		{
+			public:
+				const char *what() const throw();
+		};
+
+		class GradeTooLowException : public std::exception
+		{
+			public:
+				const char *what() const throw();
+		};
 
 };
 
