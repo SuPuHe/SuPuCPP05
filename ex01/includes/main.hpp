@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 13:45:50 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 13:47:18 by omizin           ###   ########.fr       */
+/*   Updated: 2025/11/27 14:27:27 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
