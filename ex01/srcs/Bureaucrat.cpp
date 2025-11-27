@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:17:39 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 13:47:49 by omizin           ###   ########.fr       */
+/*   Updated: 2025/11/27 14:53:27 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,20 @@ void		Bureaucrat::decrementGrade()
 	if (_grade >= 150)
 		throw GradeTooLowException();
 	_grade++;
+}
+
+void		Bureaucrat::signForm(Form &f)
+{
+	try
+	{
+		f.beSigned(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
+		return;
+	}
+	std::cout << _name << " signed " << f.getName() << std::endl;
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()

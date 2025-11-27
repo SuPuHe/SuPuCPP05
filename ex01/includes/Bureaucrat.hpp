@@ -6,13 +6,15 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:06:55 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 13:46:13 by omizin           ###   ########.fr       */
+/*   Updated: 2025/11/27 14:54:30 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "main.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -31,6 +33,8 @@ class Bureaucrat
 
 		void			incrementGrade();
 		void			decrementGrade();
+
+		void			signForm(Form &f);
 
 		class GradeTooHighException : public std::exception
 		{
