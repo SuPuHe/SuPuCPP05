@@ -73,7 +73,7 @@ void		Bureaucrat::signForm(Form &f)
 		std::cout << _name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
 		return;
 	}
-	std::cout << _name << " signed " << f.getName() << std::endl;
+	std::cout << GREEN << _name << " signed " << f.getName() << RESET << std::endl;
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()

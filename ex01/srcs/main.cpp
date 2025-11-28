@@ -14,74 +14,60 @@
 
 int main()
 {
-	std::cout << "=== Creating valid bureaucrats ===" << std::endl;
+	std::cout << "\n=== Creating Forms ===" << std::endl;
 	try
 	{
-		Bureaucrat a("BureaucratA", 10);
-		Bureaucrat b("BureaucratB", 1);
-		Bureaucrat c("BureaucratC", 150);
+		Form f1("good", 10, 5);
+		Form f2("good1", 100, 100);
 
-		std::cout << a << std::endl;
-		std::cout << b << std::endl;
-		std::cout << c << std::endl;
+		std::cout << f1 << std::endl;
+		std::cout << f2 << std::endl;
 	}
 	catch (std::exception& e)
 	{
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 
-	std::cout << std::endl << "=== Creating bureaucrats with invalid grade ===" << std::endl;
+	std::cout << "\n=== Creating Invalid Forms ===" << std::endl;
 	try
 	{
-		Bureaucrat wrong1("BureaucratHight", 0);
+		Form f("wrong", 0, 10);
 	}
-	catch (std::exception& e)
+	catch (std::exception &e)
 	{
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 	try
 	{
-		Bureaucrat wrong2("BureaucratLow", 200);
+		Form f("wrong1", 10, 200);
 	}
-	catch (std::exception& e)
+	catch (std::exception &e)
 	{
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 
-	std::cout << std::endl << "=== Testing increment and decrement ===" << std::endl;
-	try
-	{
-		Bureaucrat s("SuPuHe", 5);
-		std::cout << s << std::endl;
+	std::cout << "\n=== Bureaucrats signing forms ===" << std::endl;
 
-		s.incrementGrade();
-		std::cout << s << std::endl;
+	Bureaucrat a("Alice", 5);
+	Bureaucrat b("Bob", 50);
+	Form hight("Hightpriority", 10, 5);
+	Form low("Lowpriority", 120, 20);
 
-		s.decrementGrade();
-		std::cout << s << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << hight << std::endl;
+	std::cout << low << std::endl;
 
-		Bureaucrat j("John", 1);
-		std::cout << j << std::endl;
+	std::cout << "\n== Trying to sign Hightpriority ==" << std::endl;
+	a.signForm(hight);
+	b.signForm(hight);
 
-		j.incrementGrade();
-		std::cout << j << std::endl;
-	}
-	catch (std::exception& e)
-	{
-		std::cout << "Exception caught: " << e.what() << std::endl;
-	}
-	try
-	{
-		Bureaucrat g("Geece", 150);
-		std::cout << g << std::endl;
+	std::cout << "\n== Trying to sign Lowpriority ==" << std::endl;
+	b.signForm(low);
 
-		g.decrementGrade();
-		std::cout << g << std::endl;
-	}
-	catch (std::exception& e)
-	{
-		std::cout << "Exception caught: " << e.what() << std::endl;
-	}
+	std::cout << "\n=== Final Form States ===" << std::endl;
+	std::cout << hight << std::endl;
+	std::cout << low << std::endl;
 
 	return 0;
 }

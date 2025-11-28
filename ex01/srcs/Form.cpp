@@ -52,7 +52,13 @@ int			Form::getGTE()const { return _grade_to_execute; }
 void		Form::beSigned(Bureaucrat const &b)
 {
 	if (b.getGrade() <= _grade_to_sign)
+	{
+		if (_signed){
+			std::cout << RED << "This form already signed" << RESET << std::endl;
+			return ;
+		}
 		_signed = true;
+	}
 	else
 		throw GradeTooLowException();
 }
@@ -69,8 +75,8 @@ const char	*Form::GradeTooLowException::what() const throw()
 
 std::ostream &operator<<(std::ostream &out, const Form &f)
 {
-	out << f.getName() << " status:\nSigned: " << f.getSigned()
+	out << MAGENTA << f.getName() << " status:\nSigned: " << f.getSigned()
 	<< "\nGrade to sign: " << f.getGTS()
-	<< "\nGrade to execute: " << f.getGTE() << std::endl;
+	<< "\nGrade to execute: " << f.getGTE() << RESET << std::endl;
 	return out;
 }
