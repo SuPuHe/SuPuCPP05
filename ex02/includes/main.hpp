@@ -6,13 +6,14 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 13:45:50 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 11:57:06 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 13:58:17 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
