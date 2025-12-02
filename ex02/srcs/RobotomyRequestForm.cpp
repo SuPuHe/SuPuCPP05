@@ -12,12 +12,12 @@
 
 #include "main.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm("DefaultRobotomy", 145, 137), _target("Default")
+RobotomyRequestForm::RobotomyRequestForm(): AForm("DefaultRobotomy", 72, 45), _target("Default")
 {
 	std::cout<<"Default RobotomyRequestForm constructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm", 145, 137), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm", 72, 45), _target(target)
 {
 	std::cout<<"RobotomyRequestForm constructor called" << std::endl;
 }
