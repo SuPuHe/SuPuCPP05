@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:17:39 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 11:57:25 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 13:24:13 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,20 @@ void		Bureaucrat::signForm(AForm &f)
 		return;
 	}
 	std::cout << GREEN << _name << " signed " << f.getName() << RESET << std::endl;
+}
+
+void		Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+		return;
+	}
+	std::cout << GREEN << _name << " executed " << form.getName() << RESET << std::endl;
 }
 
 const char	*Bureaucrat::GradeTooHighException::what() const throw()

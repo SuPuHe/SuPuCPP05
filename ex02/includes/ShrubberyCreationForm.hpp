@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 11:37:22 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 12:27:42 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 13:06:50 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class ShrubberyCreationForm: public AForm{
 	private:
-		std::string		_target;
+		const std::string		_target;
 	public:
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(std::string target);

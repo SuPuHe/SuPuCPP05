@@ -73,6 +73,11 @@ const char	*AForm::GradeTooLowException::what() const throw()
 	return RED "Grade is too low" RESET;
 }
 
+const char *AForm::FormIsNotSignedException::what() const throw()
+{
+	return RED "Form is not signed" RESET;
+}
+
 std::ostream &operator<<(std::ostream &out, const AForm &f)
 {
 	out << MAGENTA << f.getName() << " status:\nSigned: " << f.getSigned()
