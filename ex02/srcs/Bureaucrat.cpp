@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:17:39 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 14:53:27 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 11:57:25 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void		Bureaucrat::decrementGrade()
 	_grade++;
 }
 
-void		Bureaucrat::signForm(Form &f)
+void		Bureaucrat::signForm(AForm &f)
 {
 	try
 	{

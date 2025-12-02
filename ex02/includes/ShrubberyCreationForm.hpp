@@ -6,10 +6,10 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 11:37:22 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 11:37:34 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 11:58:58 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "main.h"
+#include "main.hpp"

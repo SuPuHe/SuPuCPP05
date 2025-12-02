@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:06:55 by omizin            #+#    #+#             */
-/*   Updated: 2025/11/27 14:54:30 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 11:57:15 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "main.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -34,7 +34,7 @@ class Bureaucrat
 		void			incrementGrade();
 		void			decrementGrade();
 
-		void			signForm(Form &f);
+		void			signForm(AForm &f);
 
 		class GradeTooHighException : public std::exception
 		{

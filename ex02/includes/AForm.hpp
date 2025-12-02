@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,7 +14,7 @@
 
 #include "main.hpp"
 
-class Form
+class AForm
 {
 	private:
 		const std::string				_name;
@@ -22,11 +22,11 @@ class Form
 		const int						_grade_to_sign;
 		const int						_grade_to_execute;
 	public:
-		Form();
-		Form(std::string name, int gts, int gte);
-		Form(Form const &copy);
-		Form &operator=(Form const &copy);
-		~Form();
+		AForm();
+		AForm(std::string name, int gts, int gte);
+		AForm(AForm const &copy);
+		AForm &operator=(AForm const &copy);
+		~AForm();
 
 		std::string	getName()const;
 		bool		getSigned()const;
@@ -48,4 +48,4 @@ class Form
 		};
 };
 
-std::ostream &operator<<(std::ostream &out, const Form &f);
+std::ostream &operator<<(std::ostream &out, const AForm &f);
