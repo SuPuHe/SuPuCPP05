@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:06:55 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 11:57:15 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/02 12:41:48 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ class Bureaucrat
 		void			decrementGrade();
 
 		void			signForm(AForm &f);
+
+		void			executeForm(AForm const & form) const;
 
 		class GradeTooHighException : public std::exception
 		{

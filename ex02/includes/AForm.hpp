@@ -28,12 +28,14 @@ class AForm
 		AForm &operator=(AForm const &copy);
 		~AForm();
 
-		std::string	getName()const;
-		bool		getSigned()const;
-		int			getGTS()const;
-		int			getGTE()const;
+		std::string		getName()const;
+		bool			getSigned()const;
+		int				getGTS()const;
+		int				getGTE()const;
 
-		void		beSigned(Bureaucrat const &b);
+		void			beSigned(Bureaucrat const &b);
+
+		virtual void	execute(Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException : public std::exception
 		{
