@@ -14,6 +14,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
+#include <time.h>
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"

@@ -14,11 +14,17 @@
 
 int main()
 {
+	srand(time(NULL));
+
 	Bureaucrat a("Alice", 5);
 	ShrubberyCreationForm s("home");
+	RobotomyRequestForm form("human");
 
 	a.signForm(s);
+	a.signForm(form);
 	a.executeForm(s);
+	for (int i = 0; i < 10; i++)
+		a.executeForm(form);
 
 	return 0;
 }

@@ -32,7 +32,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 {
 	std::cout << "ShrubberyCreationForm copy assigment operator called" << std::endl;
 	if (this != &copy)
-		;
+		return *this;
 	return *this;
 }
 
