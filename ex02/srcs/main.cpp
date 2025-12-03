@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 13:12:25 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/03 13:24:05 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/03 13:43:46 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,6 @@ int main()
 {
 	srand(time(NULL));
 
-	// Bureaucrat a("Alice", 5);
-	// ShrubberyCreationForm s("home");
-	// RobotomyRequestForm form("human");
-	// PresidentialPardonForm p("sada");
-
-	// a.signForm(s);
-	// a.signForm(form);
-	// a.signForm(p);
-	// a.executeForm(s);
-	// for (int i = 0; i < 10; i++)
-	// 	a.executeForm(form);
-	// a.executeForm(p);
 	std::cout << "\n=== Creating Forms and Bureaucraft ===" << std::endl;
 
 	ShrubberyCreationForm shrubbery("home");
@@ -93,6 +81,6 @@ int main()
 	std::cout << "\n=== Execute presidential form ===" << std::endl;
 
 	hight.executeForm(presidential);
-	
+
 	return 0;
 }
