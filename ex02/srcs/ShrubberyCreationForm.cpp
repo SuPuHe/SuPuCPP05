@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 11:38:13 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/02 14:12:22 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/03 12:47:57 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		throw AForm::FormIsNotSignedException();
 	if (executor.getGrade() > getGTE())
 		throw AForm::GradeTooLowException();
-
-	std::cout << "Tree" << std::endl;
 
 	std::ofstream file(_target + "_shrubbery");
 	if (!file)
@@ -103,4 +101,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		"                  ###########                    \n"
 		"                  ###########                    \n";
 	file.close();
+
+	std::cout << CYAN << "to see magic run: c++ -O2 srcs/tree.cpp -std=c++17 -pthread && ./a.out "
+		<< _target << "_shrubbery" << RESET << std::endl;
 }
