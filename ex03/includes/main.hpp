@@ -6,7 +6,7 @@
 /*   By: omizin <omizin@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 13:45:50 by omizin            #+#    #+#             */
-/*   Updated: 2025/12/03 13:32:19 by omizin           ###   ########.fr       */
+/*   Updated: 2025/12/03 14:56:47 by omizin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <fstream>
 #include <stdlib.h>
 #include <time.h>
+#include <string>
+#include <functional>
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
